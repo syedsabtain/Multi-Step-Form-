@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+
 import {
   BrowserRouter as Router,
   Route,
@@ -38,7 +38,7 @@ const Pages = () => {
             <Link className={location.pathname === "/result" ? " nav-link activenav navd" : " nav-link navd"} to="/result">Result</Link>
       </nav>
       <Routes>
-      <Route exact path="/" element={<Step1></Step1>} />
+      <Route  path="/" element={<Step1></Step1>} />
       <Route path="/step2" element={<Step2></Step2>} />
       <Route path="/result" element={<Result></Result>}/>
       </Routes>

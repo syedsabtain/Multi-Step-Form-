@@ -1,4 +1,4 @@
-export default function updateAction(state, payload) {
+export default function updateAction(state:any, payload:any) {
     return {
       ...state,
       yourDetails: {

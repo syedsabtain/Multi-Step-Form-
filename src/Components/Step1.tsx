@@ -10,7 +10,7 @@ export default () => {
     defaultValues: state.yourDetails
   });
   const navigate = useNavigate()
-  const onSubmit = data => {
+  const onSubmit = (data:any) => {
     action(data);
     navigate('/step2')
   };
@@ -28,7 +28,7 @@ export default () => {
           ref={register({ required:true })}
         />
         {errors.firstName && errors.firstName.type ==='required' && (
-          <h6> *This Field is Required</h6>
+          <h6 className='mt-2 text-danger'> *This Field is Required</h6>
         )}
    
     
@@ -43,7 +43,7 @@ export default () => {
           ref={register({ required:true })}
         />
         {errors.lastName && errors.lastName.type ==='required' && (
-          <h6> *This Field is Required</h6>
+          <h6 className='mt-2 text-danger'> *This Field is Required</h6>
         )}
       
   </div>
