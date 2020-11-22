@@ -10,7 +10,12 @@ export default () => {
     defaultValues: state.yourDetails
   });
   const navigate = useNavigate()
-  const onSubmit = (data:any) => {
+  interface Data{
+    firstName: string,
+lastName: string
+  }
+  const onSubmit = (data:Data) => {
+    
     action(data);
     navigate('/step2')
   };

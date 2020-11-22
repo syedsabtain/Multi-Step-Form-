@@ -11,8 +11,13 @@ const Step2 = () => {
     defaultValues: state.yourDetails
   });
   const navigate = useNavigate()
+  interface Data{
+    firstName: string,
+lastName: string
+  }
+  const onSubmit = (data:Data) => {
+    
 
-  const onSubmit = (data:any) => {
     action(data);
     navigate('/result')
 
@@ -30,7 +35,7 @@ const Step2 = () => {
           name="age"
           type="number"
           className='form-control'
-          ref={register({required:true,min:{value:18,}})}
+          ref={register({required:true,min:18})}
         />
         {errors.age && errors.age.type ==='required' && (
           <h6 className='mt-2 text-danger'> *This Field is Required</h6>
@@ -49,7 +54,8 @@ const Step2 = () => {
           name="yearsOfExp"
           type="number"
           className='form-control'
-          ref={register({requiredt:true,min:{value:3,}})}
+          ref={register({required:true,min:3})}
+          
         />
         {errors.yearsOfExp && errors.yearsOfExp.type ==='required' && (
           <h6 className='mt-2 text-danger'> *This Field is Required</h6>
