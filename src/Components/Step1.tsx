@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useStateMachine } from "little-state-machine";
 import updateAction from "../updateAction";
 
-export default () => {
+const Step1= () => {
   const { state, action } = useStateMachine(updateAction);
   const { handleSubmit, errors, register } = useForm({
     defaultValues: state.yourDetails
@@ -60,3 +60,5 @@ lastName: string
     
   );
 };
+
+export default Step1
